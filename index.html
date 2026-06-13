@@ -3,110 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Kassan | AI Builder & Strategist</title>
-    <meta name="description" content="Penn Economics student building AI agents and automation systems. Incoming PwC Strategy& intern.">
+    <title>Ben Kassan — Building Radar Autonomy</title>
+    <meta name="description" content="Ben Kassan — founder of Radar Autonomy, builder of AI agents and autonomous systems. Penn '27, incoming PwC Strategy& intern.">
+    <meta name="theme-color" content="#05060a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ben Kassan — Building Radar Autonomy">
+    <meta property="og:description" content="Founder of Radar Autonomy. I build AI agents and autonomous systems that ship.">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Gradient Background -->
-    <div class="gradient-bg">
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Cursor glow (desktop) -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Animated background -->
+    <div class="bg-layer">
+        <div class="grid-overlay"></div>
         <div class="gradient-orb orb-1"></div>
         <div class="gradient-orb orb-2"></div>
         <div class="gradient-orb orb-3"></div>
+        <div class="noise"></div>
     </div>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">BK</a>
+            <a href="#top" class="nav-logo">
+                <span class="nav-logo-mark">BK</span>
+            </a>
             <ul class="nav-links">
+                <li><a href="#radar">Radar Autonomy</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-social">
-                <a href="https://linkedin.com/in/benjamin-kassan" target="_blank" aria-label="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="https://github.com/benkassan" target="_blank" aria-label="GitHub">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="https://x.com/ben_kassan" target="_blank" aria-label="X/Twitter">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
+            <div class="nav-actions">
+                <div class="nav-social">
+                    <a href="https://linkedin.com/in/benjamin-kassan" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/benkassan" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://x.com/ben_kassan" target="_blank" rel="noopener" aria-label="X/Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+                <a href="#contact" class="btn btn-nav">Let's talk</a>
             </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">Penn '27 &bull; Economics &bull; AI Builder</div>
-            <h1 class="hero-title">
-                <span class="hero-greeting">Hi, I'm</span>
-                <span class="hero-name">Ben Kassan</span>
-            </h1>
-            <p class="hero-tagline">I build AI agents that automate workflows, scale operations, and ship real products. Currently exploring the intersection of <span class="highlight">strategy</span>, <span class="highlight">venture capital</span>, and <span class="highlight">autonomous systems</span>.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Founder, Radar Autonomy &bull; Penn '27
+                </div>
+                <h1 class="hero-title">
+                    <span class="line">Building the</span>
+                    <span class="line gradient-text">autonomous</span>
+                    <span class="line">future.</span>
+                </h1>
+                <p class="hero-tagline">
+                    I'm <strong>Ben Kassan</strong> — I build AI agents and autonomous systems that ship to production.
+                    Now channeling that into <span class="highlight">Radar Autonomy</span>, bringing real self-driving
+                    to the road.
+                </p>
+                <div class="hero-cta">
+                    <a href="#radar" class="btn btn-primary">
+                        Explore Radar Autonomy
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get in touch</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-count="1500" data-suffix="%+">0</span>
+                        <span class="stat-label">Trading agent returns</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="40" data-suffix="+">0</span>
+                        <span class="stat-label">AI projects shipped</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-count="3.84" data-decimals="2">0</span>
+                        <span class="stat-label">GPA</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-value">1,500%+</span>
-                    <span class="stat-label">Trading Agent Returns</span>
+
+            <!-- Radar visual -->
+            <div class="hero-visual">
+                <div class="radar">
+                    <div class="radar-rings">
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                        <span class="ring"></span>
+                    </div>
+                    <div class="radar-cross"></div>
+                    <div class="radar-sweep"></div>
+                    <span class="blip blip-1"></span>
+                    <span class="blip blip-2"></span>
+                    <span class="blip blip-3"></span>
+                    <span class="blip blip-4"></span>
+                    <div class="radar-core"></div>
                 </div>
-                <div class="stat">
-                    <span class="stat-value">40+</span>
-                    <span class="stat-label">AI Projects Built</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">3.84</span>
-                    <span class="stat-label">GPA</span>
-                </div>
+                <div class="radar-caption">Perception online</div>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="code-window">
-                <div class="code-header">
-                    <span class="code-dot red"></span>
-                    <span class="code-dot yellow"></span>
-                    <span class="code-dot green"></span>
-                    <span class="code-title">agent.py</span>
-                </div>
-                <pre class="code-content"><code><span class="code-keyword">class</span> <span class="code-class">BenKassan</span>:
-    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
-        self.role = <span class="code-string">"AI Builder"</span>
-        self.school = <span class="code-string">"Penn '27"</span>
-        self.interests = [
-            <span class="code-string">"Agent Systems"</span>,
-            <span class="code-string">"Strategy"</span>,
-            <span class="code-string">"Venture Capital"</span>
-        ]
 
-    <span class="code-keyword">def</span> <span class="code-func">build</span>(self, idea):
-        <span class="code-keyword">return</span> ship_to_production(idea)</code></pre>
+        <a href="#radar" class="scroll-hint" aria-label="Scroll down">
+            <span class="mouse"><span class="wheel"></span></span>
+        </a>
+    </header>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Autonomous Systems</span><span class="dot">&bull;</span>
+            <span>AI Agents</span><span class="dot">&bull;</span>
+            <span>Agent Orchestration</span><span class="dot">&bull;</span>
+            <span>Strategy</span><span class="dot">&bull;</span>
+            <span>Venture Capital</span><span class="dot">&bull;</span>
+            <span>Perception</span><span class="dot">&bull;</span>
+            <span>Automation</span><span class="dot">&bull;</span>
+            <span>Autonomous Systems</span><span class="dot">&bull;</span>
+            <span>AI Agents</span><span class="dot">&bull;</span>
+            <span>Agent Orchestration</span><span class="dot">&bull;</span>
+            <span>Strategy</span><span class="dot">&bull;</span>
+            <span>Venture Capital</span><span class="dot">&bull;</span>
+            <span>Perception</span><span class="dot">&bull;</span>
+            <span>Automation</span><span class="dot">&bull;</span>
+        </div>
+    </div>
+
+    <!-- Radar Autonomy flagship -->
+    <section class="section radar-section" id="radar">
+        <div class="section-inner">
+            <span class="section-label">Flagship</span>
+            <div class="radar-flagship">
+                <div class="radar-flagship-text">
+                    <h2 class="section-title">Radar Autonomy</h2>
+                    <p class="lead">
+                        What started as Hamptons Robotaxi has grown into <strong>Radar Autonomy</strong> — a venture
+                        bringing autonomous mobility to the road. We're building the perception, software, and
+                        go-to-market to put real self-driving vehicles into the hands of riders.
+                    </p>
+                    <ul class="radar-points">
+                        <li>
+                            <span class="point-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M1 12h6m6 0h6"/></svg>
+                            </span>
+                            <div>
+                                <strong>Perception &amp; autonomy</strong>
+                                Sensor fusion and decision systems built to navigate the real world safely.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="point-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+                            </span>
+                            <div>
+                                <strong>Strategy &amp; operations</strong>
+                                Market entry, unit economics, and the playbook to launch a fleet from zero.
+                            </div>
+                        </li>
+                        <li>
+                            <span class="point-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </span>
+                            <div>
+                                <strong>AI-native by default</strong>
+                                Agent swarms power our engineering, ops, and growth — the way every company will run.
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="radar-cta">
+                        <a href="https://hamptonsrobotaxi.com" target="_blank" rel="noopener" class="btn btn-primary">
+                            Visit the site
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                        </a>
+                        <span class="radar-status"><span class="pulse-dot"></span> Launching 2026</span>
+                    </div>
+                </div>
+                <div class="radar-flagship-visual">
+                    <div class="radar radar-lg">
+                        <div class="radar-rings">
+                            <span class="ring"></span>
+                            <span class="ring"></span>
+                            <span class="ring"></span>
+                            <span class="ring"></span>
+                        </div>
+                        <div class="radar-cross"></div>
+                        <div class="radar-sweep"></div>
+                        <span class="blip blip-1"></span>
+                        <span class="blip blip-2"></span>
+                        <span class="blip blip-3"></span>
+                        <span class="blip blip-4"></span>
+                        <div class="radar-core"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section class="section" id="about">
         <div class="section-inner">
             <span class="section-label">About</span>
-            <h2 class="section-title">Builder at heart, strategist by training</h2>
+            <h2 class="section-title">Builder at heart, <span class="gradient-text">strategist</span> by training</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I'm an Economics major at the <strong>University of Pennsylvania</strong> with minors in Statistics and Data Science. My focus is on building AI systems that actually work in production—not just demos.</p>
-                    <p>I've shipped AI agents at a YC-backed startup, automated VC deal flow, and built trading systems with 1,500%+ returns. This summer, I'll be joining <strong>PwC Strategy&</strong> as a Deal Technology Strategy Intern.</p>
-                    <p>When I'm not coding, you'll find me powerlifting (national competitor), playing rugby, or grinding poker.</p>
+                    <p>I'm an Economics major at the <strong>University of Pennsylvania</strong> (Class of '27) with minors in Statistics and Data Science. I care about one thing above all: building systems that actually work in production — not just demos.</p>
+                    <p>Over the past two years I've shipped AI agents at a YC-backed startup, automated VC deal flow, and built trading systems returning <strong>1,500%+</strong>. This summer I'm joining <strong>PwC Strategy&amp;</strong> as a Deal Technology Strategy Intern — and pouring everything I've learned into <strong>Radar Autonomy</strong>.</p>
+                    <p>When I'm offline you'll find me powerlifting (national competitor), playing rugby, or grinding poker and chess.</p>
                 </div>
                 <div class="about-skills">
-                    <h3>Technical Stack</h3>
+                    <h3>Technical stack</h3>
                     <div class="skills-grid">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
@@ -119,7 +247,7 @@
                         <span class="skill-tag">Agent Orchestration</span>
                         <span class="skill-tag">Cursor</span>
                     </div>
-                    <h3>Interests</h3>
+                    <h3>Off the clock</h3>
                     <div class="skills-grid">
                         <span class="skill-tag interest">Powerlifting</span>
                         <span class="skill-tag interest">Rugby</span>
@@ -132,8 +260,8 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section section-dark" id="experience">
+    <!-- Experience -->
+    <section class="section section-alt" id="experience">
         <div class="section-inner">
             <span class="section-label">Experience</span>
             <h2 class="section-title">Where I've worked</h2>
@@ -141,184 +269,173 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Summer 2026</div>
                     <div class="timeline-content">
-                        <div class="timeline-company">PwC Strategy&</div>
+                        <div class="timeline-company">PwC Strategy&amp;</div>
                         <div class="timeline-role">Deal Technology Strategy Intern</div>
                         <div class="timeline-location">New York, NY</div>
-                        <p>Incoming intern focused on technology strategy in M&A and deal contexts.</p>
+                        <p>Incoming intern focused on technology strategy in M&amp;A and deal contexts.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Sep 2025 - Present</div>
+                    <div class="timeline-date">Sep 2025 — Present</div>
                     <div class="timeline-content">
                         <div class="timeline-company">Fingerpaint Group</div>
                         <div class="timeline-role">AI Operations Intern</div>
                         <div class="timeline-location">Philadelphia, PA</div>
-                        <p>Built and deployed AI agents for paid search optimization and media brief generation using Claude Code, Gemini 3, and Anti-Gravity. Mapped end-to-end marketing workflows and defined KPIs to track automation impact.</p>
+                        <p>Built and deployed AI agents for paid-search optimization and media brief generation using Claude Code, Gemini 3, and Anti-Gravity. Mapped end-to-end marketing workflows and defined KPIs to track automation impact.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Sep 2025 - Present</div>
+                    <div class="timeline-date">Sep 2025 — Present</div>
                     <div class="timeline-content">
                         <div class="timeline-company">Etienne Lane VC</div>
                         <div class="timeline-role">Venture Capital Fellow</div>
                         <div class="timeline-location">Remote</div>
-                        <p>Built agent swarms that replicate intern workflows: sourcing startups, scraping data, synthesizing investment briefs. Deployed sourcing agents that identify founders, draft outreach, and schedule intro calls—expanding deal flow while freeing the team for deeper diligence.</p>
+                        <p>Built agent swarms that replicate intern workflows: sourcing startups, scraping data, and synthesizing investment briefs. Deployed sourcing agents that identify founders, draft outreach, and schedule intro calls — expanding deal flow while freeing the team for deeper diligence.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">Jun - Aug 2025</div>
+                    <div class="timeline-date">Jun — Aug 2025</div>
                     <div class="timeline-content">
                         <div class="timeline-company">GradeWiz <span class="badge">YC-Backed</span></div>
                         <div class="timeline-role">Student Success Engineer</div>
                         <div class="timeline-location">New York, NY</div>
-                        <p>Led NYC private-school growth initiative, ran pilots in 5 schools, and signed 2 clients. Designed system improvements that reduced latency and improved scoring agreement using LangChain batching, caching, and prompt optimization.</p>
+                        <p>Led the NYC private-school growth initiative, ran pilots in 5 schools, and signed 2 clients. Designed system improvements that reduced latency and improved scoring agreement using LangChain batching, caching, and prompt optimization.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">May - Aug 2025</div>
+                    <div class="timeline-date">May — Aug 2025</div>
                     <div class="timeline-content">
-                        <div class="timeline-company">Cornick Garber & Sandler</div>
+                        <div class="timeline-company">Cornick, Garber &amp; Sandler</div>
                         <div class="timeline-role">Summer Analyst</div>
                         <div class="timeline-location">New York, NY</div>
-                        <p>Designed and piloted agentic LLM automations for tax return preparation workflows. Built doc intake → data extraction → draft schedules pipeline in n8n + React.js, cutting manual entry by up to 80%.</p>
+                        <p>Designed and piloted agentic LLM automations for tax-return preparation workflows. Built a doc intake → data extraction → draft schedules pipeline in n8n + React.js, cutting manual entry by up to 80%.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section class="section" id="projects">
         <div class="section-inner">
             <span class="section-label">Projects</span>
             <h2 class="section-title">What I've built</h2>
             <div class="projects-grid">
-                <div class="project-card featured">
+                <article class="project-card featured" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
                     <h3>Options Trading Agent</h3>
                     <p>Research agent that ingests news, earnings calendars, and market data to generate options strategies. Achieved <strong>1,500%+ cumulative returns</strong> since July.</p>
                     <div class="project-tags">
-                        <span>Python</span>
-                        <span>LangChain</span>
-                        <span>Market Data APIs</span>
+                        <span>Python</span><span>LangChain</span><span>Market Data APIs</span>
                     </div>
-                </div>
-                <div class="project-card featured">
+                </article>
+
+                <article class="project-card featured" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                     </div>
                     <h3>Hackathon Agent Swarm</h3>
-                    <p>AI agent swarm that simulates hackathon teams across four disciplines. Orchestrated idea generation, spec writing, coding, and testing for 40+ projects. <strong>Anthropic x Penn Hackathon Semi-Finalist.</strong></p>
+                    <p>AI agent swarm that simulates hackathon teams across four disciplines — orchestrating ideation, spec writing, coding, and testing for 40+ projects. <strong>Anthropic × Penn Hackathon Semi-Finalist.</strong></p>
                     <div class="project-tags">
-                        <span>Claude Code</span>
-                        <span>Agent Orchestration</span>
-                        <span>Multi-Agent</span>
+                        <span>Claude Code</span><span>Agent Orchestration</span><span>Multi-Agent</span>
                     </div>
-                </div>
-                <div class="project-card">
+                </article>
+
+                <article class="project-card" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                     </div>
                     <h3>Newsglide.org</h3>
                     <p>News aggregation and summarization platform built with LLM workflows.</p>
-                    <div class="project-tags">
-                        <span>Lovable</span>
-                        <span>AI Workflows</span>
-                    </div>
-                    <a href="https://newsglide.org" target="_blank" class="project-link">Visit Site &rarr;</a>
-                </div>
-                <div class="project-card">
+                    <div class="project-tags"><span>Lovable</span><span>AI Workflows</span></div>
+                    <a href="https://newsglide.org" target="_blank" rel="noopener" class="project-link">Visit site &rarr;</a>
+                </article>
+
+                <article class="project-card" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>E&B Agentic Solutions</h3>
+                    <h3>E&amp;B Agentic Solutions</h3>
                     <p>AI automation consulting and implementation for businesses.</p>
-                    <div class="project-tags">
-                        <span>n8n</span>
-                        <span>Automation</span>
-                    </div>
-                </div>
-                <div class="project-card">
+                    <div class="project-tags"><span>n8n</span><span>Automation</span></div>
+                </article>
+
+                <article class="project-card" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                     </div>
                     <h3>Americanaidream.org</h3>
                     <p>Platform supporting American AI initiatives and education.</p>
-                    <div class="project-tags">
-                        <span>Claude Code</span>
-                        <span>Cursor</span>
-                    </div>
-                    <a href="https://americanaidream.org" target="_blank" class="project-link">Visit Site &rarr;</a>
-                </div>
-                <div class="project-card">
+                    <div class="project-tags"><span>Claude Code</span><span>Cursor</span></div>
+                    <a href="https://americanaidream.org" target="_blank" rel="noopener" class="project-link">Visit site &rarr;</a>
+                </article>
+
+                <article class="project-card highlight-card" data-tilt>
                     <div class="project-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6M4.2 4.2l4.3 4.3m7 7l4.3 4.3M1 12h6m6 0h6M4.2 19.8l4.3-4.3m7-7l4.3-4.3"/></svg>
                     </div>
-                    <h3>Hamptons Robotaxi</h3>
-                    <p>Website and investor materials for autonomous vehicle startup launching Summer 2026.</p>
-                    <div class="project-tags">
-                        <span>HTML/CSS/JS</span>
-                        <span>Strategy</span>
-                    </div>
-                    <a href="https://hamptonsrobotaxi.com" target="_blank" class="project-link">Visit Site &rarr;</a>
-                </div>
+                    <h3>Radar Autonomy</h3>
+                    <p>Autonomous mobility venture (formerly Hamptons Robotaxi) — perception, software, and go-to-market for real self-driving on the road.</p>
+                    <div class="project-tags"><span>Autonomy</span><span>Strategy</span><span>Founder</span></div>
+                    <a href="https://hamptonsrobotaxi.com" target="_blank" rel="noopener" class="project-link">Visit site &rarr;</a>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section class="section section-dark" id="leadership">
+    <!-- Leadership -->
+    <section class="section section-alt" id="leadership">
         <div class="section-inner">
             <span class="section-label">Leadership</span>
             <h2 class="section-title">Building communities</h2>
             <div class="leadership-card">
                 <div class="leadership-header">
                     <h3>Education Consulting at Penn (ECP)</h3>
-                    <span class="leadership-role">Co-Founder & President</span>
+                    <span class="leadership-role">Co-Founder &amp; President</span>
                 </div>
                 <p>Founded and scaled a 40+ member consulting group tackling education equity through data-driven strategy and grassroots outreach with schools and non-profits.</p>
                 <ul class="leadership-highlights">
-                    <li>Led turnaround strategy for nonprofit client, boosting membership by <strong>75%</strong></li>
-                    <li>Coordinated professional events with SpaceX's Ad Astra program, attracting <strong>60+ participants</strong></li>
-                    <li>Manage recruiting, client acquisition, and project mentorship</li>
+                    <li>Led turnaround strategy for a nonprofit client, boosting membership by <strong>75%</strong>.</li>
+                    <li>Coordinated professional events with SpaceX's Ad Astra program, attracting <strong>60+ participants</strong>.</li>
+                    <li>Manage recruiting, client acquisition, and project mentorship.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
         <div class="section-inner contact-inner">
             <span class="section-label">Contact</span>
-            <h2 class="section-title">Let's connect</h2>
-            <p class="contact-text">I'm always interested in hearing about new opportunities, interesting projects, or just chatting about AI and strategy.</p>
+            <h2 class="section-title">Let's build something</h2>
+            <p class="contact-text">Always up for new opportunities, interesting projects, or just chatting about autonomy, AI, and strategy. Reach out — I reply fast.</p>
             <div class="contact-links">
                 <a href="mailto:bkassan@sas.upenn.edu" class="contact-card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     <span>bkassan@sas.upenn.edu</span>
                 </a>
-                <a href="https://linkedin.com/in/benjamin-kassan" target="_blank" class="contact-card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <a href="https://linkedin.com/in/benjamin-kassan" target="_blank" rel="noopener" class="contact-card">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/benkassan" target="_blank" class="contact-card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <a href="https://github.com/benkassan" target="_blank" rel="noopener" class="contact-card">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     <span>GitHub</span>
                 </a>
-                <a href="https://x.com/ben_kassan" target="_blank" class="contact-card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <a href="https://x.com/ben_kassan" target="_blank" rel="noopener" class="contact-card">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     <span>X / Twitter</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
-            <p>&copy; 2026 Ben Kassan. Built with Claude Code.</p>
+            <span class="footer-logo">BK</span>
+            <p>&copy; 2026 Ben Kassan &bull; Building Radar Autonomy</p>
         </div>
     </footer>
 
