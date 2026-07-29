@@ -120,34 +120,27 @@ export const PROJECTS: Project[] = [
 export const ECONOMICS = [
   {
     n: '01',
-    title: 'Aggregates hide the only interesting question',
+    title: 'Elasticity decides where the unemployment shows up',
     body:
-      'Output went up. Productivity went up. Food supply went up. None of those sentences tells you who benefited, and the gap between the headline and the incidence is usually where the actual economics is. I keep arriving at this from different directions — in labour, in development, in health data — which is probably a sign it is the thing I actually believe rather than a thing I was taught.',
-    source: 'Recurs across five separate pieces of written work',
+      'A productivity shock does not land evenly. If an industry faces inelastic demand, making its output cheaper does not expand the market much, so the gain arrives as the same output produced by fewer people. Where demand is elastic, cheaper output grows the market and employment can rise alongside productivity. So “will AI cause unemployment” is the wrong question — the elasticity is the parameter that decides, and it has a different value in every sector. Estimating it sector by sector is the actual work, and it is mostly not being done.',
+    source: 'The through-line in how I read AI and labour',
   },
   {
     n: '02',
-    title: 'On AI and labour: the studies measure a floor, not a ceiling',
+    title: 'The studies measure a floor, not a ceiling',
     body:
-      'The credible causal work on AI and productivity is real and I accept it. But it studies suggestion-style tools from an earlier model generation, so the effect it identifies is a lower bound on what current systems do — and agentic systems change the question from “does this complement labour?” to “where does it substitute?”. That is an empirical question with a different answer in each sector, which is exactly why the general optimist and doomer framings are both useless.',
+      'The credible causal work on AI and productivity is real and I accept it. But it studies suggestion-style tools from an earlier model generation, so the effect it identifies is a lower bound on what current systems do. Agentic systems move the question from “does this complement labour?” to “where does it substitute?” — and complement and substitute are not opinions about AI, they are empirical claims about a particular labour market.',
     source: 'My section of a labour economics presentation — “The Floor, Not the Ceiling”',
   },
   {
     n: '03',
-    title: 'Scarcity is rarely the binding constraint',
+    title: 'Slower than I expected, and still a fast takeoff',
     body:
-      'Famine is a failure of access, entitlement and political accountability far more often than a failure of aggregate supply — India has run food surpluses alongside mass hunger. Where I try to push past Sen is that entitlement failure is not random: it is patterned by caste, class and political voice, and the digital welfare infrastructure introduced to make distribution efficient often reproduces those hierarchies instead of dissolving them.',
-    source: 'Research essay on the global politics of food',
+      'I have been wrong on timing. Agents have arrived more slowly than I predicted, and I think the honest read is that the lag is in diffusion — org design, trust, procurement, who is allowed to approve what — rather than in capability. That distinction matters, because a capability overhang that adoption has not absorbed yet is not a reason to expect a gentle transition. I still think we are in a fast takeoff and that the economic change will be drastic; I have just stopped being confident about the quarter it shows up in.',
+    source: 'A stated view, and a revised one',
   },
   {
     n: '04',
-    title: 'One blunt instrument cannot carry several distinct problems',
-    body:
-      'A lot of policy failure is really bundling failure — several separate objectives loaded onto a single weak instrument, which then collapses the first time it is challenged. The fix is usually to unbundle: separate policies for separate problems, coordinated but distinct. A narrower, better-evidenced measure is more ambitious in practice than a maximalist one that does not survive review.',
-    source: 'Policy brief on Mexico’s GM corn decree and the USMCA panel',
-  },
-  {
-    n: '05',
     title: 'Grade your own evidence before someone else does',
     body:
       'When I ran the analysis on whether AV-adjacent industrial property was actually repricing, most of my own results came back low confidence, my synthetic control was probably overfit, and one significant coefficient rested on too little data to interpret. I wrote all of that down next to the findings. An estimate without a confidence tier and a falsification condition is a decoration.',

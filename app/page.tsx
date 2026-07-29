@@ -278,7 +278,7 @@ export default function Home() {
               index="04"
               label="Economics"
               title="What I actually think."
-              intro="I read economics as an undergraduate and use it every day in diligence work. These are positions I have argued in writing, not a reading list."
+              intro="Mostly labour: what happens to employment when productivity moves, and why the answer is different in every industry. These are positions I hold and will defend, not a reading list."
             />
 
             <div className="mt-16">
@@ -303,6 +303,28 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+
+            <Reveal className="mt-14">
+              <div className="grid gap-6 rounded-[4px] border border-[color-mix(in_oklab,var(--color-amber)_28%,transparent)] bg-[color-mix(in_oklab,var(--color-amber)_5%,transparent)] p-8 md:grid-cols-12 md:items-center lg:p-10">
+                <div className="md:col-span-8">
+                  <p className="eyebrow mb-3 text-amber">Open invitation</p>
+                  <h3 className="display text-[1.6rem] leading-snug">
+                    I want to do actual empirical work on this.
+                  </h3>
+                  <p className="mt-3 max-w-[58ch] text-[0.9375rem] leading-relaxed text-paper-dim">
+                    If you are working on labour-demand elasticity, AI adoption and employment, or anything
+                    adjacent — as a researcher, a student, or someone sitting on data — I would like to hear
+                    from you. Co-authors, replication partners, and people who think I have this wrong are
+                    all equally welcome.
+                  </p>
+                </div>
+                <div className="md:col-span-4 md:justify-self-end">
+                  <a href="mailto:bkassan@sas.upenn.edu?subject=Economics" className="btn btn-accent">
+                    Start a conversation
+                  </a>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 

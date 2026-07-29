@@ -177,15 +177,18 @@ body::after {
   margin-inline: -0.04em;
 }
 
+/* Fail safe: words are visible by default and only start hidden when an
+   ancestor explicitly declares data-shown="false". A heading that forgets its
+   <Reveal> wrapper then renders plainly instead of staying invisible forever. */
 .word-mask > span {
   display: inline-block;
-  transform: translate3d(0, 105%, 0);
+  transform: none;
   transition: transform 1.05s var(--ease-out-expo);
   transition-delay: var(--word-delay, 0ms);
 }
 
-[data-shown='true'] .word-mask > span {
-  transform: none;
+[data-shown='false'] .word-mask > span {
+  transform: translate3d(0, 105%, 0);
 }
 
 /* ------------------------------------------------------------------ *

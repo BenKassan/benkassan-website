@@ -151,7 +151,7 @@ export default function AgenticOsPage() {
         {/* ------------------------------------------- IN A REPOSITORY */}
         <section className="relative bg-ink-900 py-[13vh]">
           <div className="shell grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-5">
+            <Reveal className="md:col-span-5">
               <p className="eyebrow tnum mb-2 text-amber">02</p>
               <p className="eyebrow mb-6">In a repository</p>
               <h2 className="display max-w-[16ch] text-[clamp(1.9rem,4vw,3.1rem)]">
@@ -173,7 +173,7 @@ export default function AgenticOsPage() {
               <div className="mt-9">
                 <ArrowLink href="/radar">The full case study</ArrowLink>
               </div>
-            </div>
+            </Reveal>
 
             <div className="md:col-span-7 md:pt-2">
               <SpecTable
@@ -212,13 +212,13 @@ export default function AgenticOsPage() {
         {/* ------------------------------------------------- IN A FIRM */}
         <section className="relative border-t border-[var(--line)] bg-ink-850 py-[13vh]">
           <div className="shell grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-5">
+            <Reveal className="md:col-span-5">
               <p className="eyebrow tnum mb-2 text-amber">03</p>
               <p className="eyebrow mb-6">In a firm</p>
               <h2 className="display max-w-[18ch] text-[clamp(1.9rem,4vw,3.1rem)]">
                 <SplitWords text="When the substrate is documents, not code." />
               </h2>
-            </div>
+            </Reveal>
             <div className="prose-body md:col-span-7 md:pt-2 text-[1rem]">
               <p>
                 A consulting team&rsquo;s real substrate is not a Git repository. It is a document store —
@@ -292,13 +292,13 @@ Anything sent, signed, or published.`}</code>
         {/* ------------------------------------------------------ WHY */}
         <section className="relative bg-ink-900 py-[13vh]">
           <div className="shell grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-5">
+            <Reveal className="md:col-span-5">
               <p className="eyebrow tnum mb-2 text-amber">04</p>
               <p className="eyebrow mb-6">Why repo-shaped wins</p>
               <h2 className="display max-w-[16ch] text-[clamp(1.9rem,4vw,3.1rem)]">
                 <SplitWords text="Four properties you get for free." />
               </h2>
-            </div>
+            </Reveal>
             <div className="md:col-span-7 md:pt-2">
               <SpecTable
                 rows={[
