@@ -56,6 +56,15 @@ export function Footer() {
                 Agentic operating systems — a method
               </Link>
             </li>
+            <li>
+              <a
+                href="/Benjamin_Kassan_Resume_August_2026.pdf"
+                className="link-underline text-[0.875rem] text-paper-dim hover:text-paper"
+                download
+              >
+                Resume — PDF
+              </a>
+            </li>
           </ul>
         </div>
       </div>

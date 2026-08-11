@@ -10,9 +10,9 @@ export const PRACTICE = [
     index: '01',
     title: 'AI due diligence',
     body:
-      'Working out whether an AI claim survives contact with the model, the data behind it, and the org that has to run it. The interesting question is rarely whether the technology works — it is what the business would have to be true for the value to land.',
+      'Supporting private-equity diligence by working out whether an AI claim survives contact with the model, the data behind it, and the organisation that has to run it. The interesting question is rarely whether the technology works — it is what would have to be true for the investment case to hold.',
     points: [
-      'Model, data, and infrastructure maturity in a deal context',
+      'Model, data, product, and infrastructure maturity in a deal context',
       'Separating demonstrated capability from roadmap',
       'Technical risk written so a deal team can price it',
     ],
@@ -21,7 +21,7 @@ export const PRACTICE = [
     index: '02',
     title: 'AI value creation',
     body:
-      'The other side of the same question, after close. Which processes actually change, what the change is worth, what has to be rebuilt to get it, and how long before it shows up in the numbers rather than the narrative.',
+      'The other side of the private-equity question: where AI can create measurable operating value. Which portfolio-company processes actually change, what the change is worth, what has to be rebuilt to get it, and how long before it shows up in the numbers rather than the narrative.',
     points: [
       'Workflow-level opportunity mapping, not tool inventories',
       'Value cases tied to a measurable operating metric',
@@ -32,11 +32,11 @@ export const PRACTICE = [
     index: '03',
     title: 'Agentic tooling, internally',
     body:
-      'Building the agent workflows the team uses on its own work, and — more usefully — writing down how to do it. I ran a session for my group on agent instruction files: how to make delegated work reproducible instead of impressive once.',
+      'Building reusable agent frameworks for consulting research and analysis, then teaching the operating model behind them. I presented a practical playbook to 100+ Strategy& professionals on structuring workspaces, coordinating specialist agents, and making delegated work reproducible rather than impressive once.',
     points: [
-      'Internal agent workflows for research and analysis',
-      'AGENTS.md / CLAUDE.md conventions as a shared standard',
-      'An enablement session delivered to the full group',
+      'Reusable internal agent workflows for research and analysis',
+      'Workspace instructions and source-of-truth conventions as a shared standard',
+      '100+ professionals reached in a live enablement session',
     ],
   },
 ] as const
@@ -174,8 +174,9 @@ export const EXPERIENCE = [
     org: 'PwC Strategy&',
     role: 'Deal Technology Strategy',
     points: [
-      'AI due diligence and AI value creation across deal work.',
-      'Internal agentic AI tooling; delivered a group-wide session on writing agent instruction files.',
+      'AI strategy across private-equity diligence and value-creation workstreams — assessing model, data, product and infrastructure maturity, translating technical risk into investment implications, and sequencing execution roadmaps.',
+      'Built reusable agent frameworks for consulting research and analysis, with source-of-truth hierarchies, specialist delegation, review gates and human approval boundaries.',
+      'Presented a practical agents playbook to 100+ Strategy& professionals on workspace design, multi-agent coordination and responsible adoption.',
     ],
   },
   {

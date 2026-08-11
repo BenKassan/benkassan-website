@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     template: '%s — Benjamin Kassan',
   },
   description:
-    'Strategy consultant and systems builder. AI due diligence and value creation at PwC Strategy&; designer of Radar Autonomy, a decision system for autonomous-fleet depot infrastructure.',
+    'Strategy consultant and systems builder. Private-equity AI diligence, value creation, and agent frameworks at PwC Strategy&; designer of Radar Autonomy, a decision system for autonomous-fleet depot infrastructure.',
   openGraph: {
     title: 'Benjamin Kassan — Strategy & applied AI systems',
     description:
-      'AI due diligence and value creation at PwC Strategy&. Builder of agent-run software systems, including Radar Autonomy.',
+      'Private-equity AI diligence, value creation, and agent frameworks at PwC Strategy&. Builder of agent-run software systems, including Radar Autonomy.',
     url: SITE,
     siteName: 'Benjamin Kassan',
     type: 'website',

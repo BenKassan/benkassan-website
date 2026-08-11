@@ -226,6 +226,12 @@ export default function AgenticOsPage() {
                 and the problem both live.
               </p>
               <p>
+                At Strategy&amp;, I turned that idea into reusable agent frameworks for research and analysis,
+                then presented the playbook to 100+ professionals: how to lay out authoritative context,
+                delegate to specialist agents, review the diff, and keep people on client-facing or
+                irreversible decisions.
+              </p>
+              <p>
                 So the move is to make the document store <em>behave</em> like a repository. Same four parts,
                 different medium:{' '}
                 <strong>

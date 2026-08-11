@@ -40,10 +40,10 @@ export default function Home() {
               </h1>
 
               <p className="lede mt-8 max-w-[52ch]">
-                I work on <strong className="font-medium text-paper">AI due diligence</strong> and{' '}
-                <strong className="font-medium text-paper">value creation</strong> at PwC Strategy&amp;, and I
-                build software where every number can be traced back to the source it came from. Economics
-                undergraduate; most of what I know I learned by shipping.
+                I work on <strong className="font-medium text-paper">private-equity AI diligence</strong> and{' '}
+                <strong className="font-medium text-paper">value creation</strong> at PwC Strategy&amp;, build
+                agent frameworks for consulting teams, and ship software where every number can be traced back
+                to its source. Economics undergraduate; most of what I know I learned by shipping.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -53,6 +53,9 @@ export default function Home() {
                 <Link href="/agentic-os" className="btn">
                   Agentic operating systems
                 </Link>
+                <a href="/Benjamin_Kassan_Resume_August_2026.pdf" className="btn" download>
+                  Download resume
+                </a>
               </div>
             </Reveal>
           </div>
