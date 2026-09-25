@@ -4,12 +4,12 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const LINKS = [
-  { href: '/#builds', label: 'Builds' },
-  { href: '/#hackathons', label: 'Hackathons' },
-  { href: '/#experience', label: 'Experience' },
-  { href: '/#economics', label: 'Economics' },
+  { href: '/classic#builds', label: 'Builds' },
+  { href: '/classic#hackathons', label: 'Hackathons' },
+  { href: '/classic#experience', label: 'Experience' },
+  { href: '/classic#economics', label: 'Economics' },
   { href: '/agentic-os', label: 'Agentic OS' },
-  { href: '/#contact', label: 'Contact' },
+  { href: '/classic#contact', label: 'Contact' },
 ]
 
 function Clock() {

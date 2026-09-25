@@ -566,7 +566,7 @@ export default function RadarPage() {
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <ArrowLink href="/agentic-os">The operating system behind this</ArrowLink>
-                <ArrowLink href="/">Back to the index</ArrowLink>
+                <ArrowLink href="/">Back to the map</ArrowLink>
               </div>
             </div>
           </div>

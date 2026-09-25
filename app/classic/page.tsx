@@ -53,7 +53,7 @@ export default function Home() {
                 <Link href="/agentic-os" className="btn">
                   Agentic operating systems
                 </Link>
-                <a href="/Benjamin_Kassan_Resume_August_2026.pdf" className="btn" download>
+                <a href="/Benjamin_Kassan_Resume.pdf" className="btn" download>
                   Download resume
                 </a>
               </div>
@@ -322,7 +322,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="md:col-span-4 md:justify-self-end">
-                  <a href="mailto:bkassan@sas.upenn.edu?subject=Economics" className="btn btn-accent">
+                  <a href="mailto:benkassan@radarautonomy.com?subject=Economics" className="btn btn-accent">
                     Start a conversation
                   </a>
                 </div>
@@ -414,8 +414,8 @@ export default function Home() {
                 infrastructure get answered fastest.
               </p>
               <div className="mt-10 flex flex-wrap items-center gap-3">
-                <a href="mailto:bkassan@sas.upenn.edu" className="btn btn-accent">
-                  bkassan@sas.upenn.edu
+                <a href="mailto:benkassan@radarautonomy.com" className="btn btn-accent">
+                  benkassan@radarautonomy.com
                 </a>
                 <a
                   href="https://linkedin.com/in/benjamin-kassan"

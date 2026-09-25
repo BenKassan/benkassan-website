@@ -337,7 +337,7 @@ Anything sent, signed, or published.`}</code>
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-6">
                 <ArrowLink href="/radar">See the system this describes</ArrowLink>
-                <Link href="/#contact" className="btn">
+                <Link href="/classic#contact" className="btn">
                   Get in touch
                 </Link>
               </div>

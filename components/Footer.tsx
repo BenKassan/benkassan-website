@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const SOCIAL = [
-  { href: 'mailto:bkassan@sas.upenn.edu', label: 'Email' },
+  { href: 'mailto:benkassan@radarautonomy.com', label: 'Email' },
   { href: 'https://linkedin.com/in/benjamin-kassan', label: 'LinkedIn' },
   { href: 'https://github.com/benkassan', label: 'GitHub' },
   { href: 'https://x.com/ben_kassan', label: 'X' },
@@ -58,7 +58,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="/Benjamin_Kassan_Resume_August_2026.pdf"
+                href="/Benjamin_Kassan_Resume.pdf"
                 className="link-underline text-[0.875rem] text-paper-dim hover:text-paper"
                 download
               >
